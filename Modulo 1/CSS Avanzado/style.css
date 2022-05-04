@@ -3,17 +3,25 @@ body{
 }
 
 .chips-list {
-
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /*Flex way to define gap between elements*/
+    gap: 12px;
 }
 
-.chips-list-item {
-
+/*classic way to define gap between elements
+.chip-list-item {
+    margin-left:  15px;
 }
+*/
 
 .chip {
     display: inline-block;
     background-color: rgb(239,239,239);
     color: #333333;
-    padding: 12px;
+    padding: 6px 10px;
+    border-radius: 12px;
 
 }
