@@ -1,0 +1,51 @@
+.padre{
+    display:flex;
+    justify-content:space-around;
+}
+
+.padre2{
+    display:flex;
+}
+
+.padre2 .hijo{
+    background: #ccc
+}
+
+.hijo-estirar{
+    flex-grow:1
+}
+
+.comment{
+    display: flex;
+    gap:12px;
+}
+
+.avatar{
+    border-radius:50%;
+    height: 70px;
+    width:70px;
+}
+
+.author-name{
+    margin: 0px;
+    text-align: center;
+}
+
+.bubble{
+    flex-grow: 1;
+}
+
+.bubble-box{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:12px;
+}
+
+.bubble-box-text{
+    margin:0;
+}
+
+.bubble-box-time{
+    margin-top:4px;
+    display: inline-block;
+}
