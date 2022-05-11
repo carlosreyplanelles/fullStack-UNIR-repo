@@ -1,9 +1,274 @@
-.nav-list{
-    list-style: none;
+body {
+    font-family: roboto, sans-serif;
+    font-size: 0.75rem;
 }
-.nav-list_item{
-
+.main-container{
+    margin:0px 10px;
 }
-.header-content_position{
+/*HEADER*/
+.logo {
+    font-weight: bold;
+}
 
+.header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    align-items: center;
+    border: solid 1px #cccccc;
+}
+
+.navBar_style {
+    visibility: hidden;
+}
+
+/*PRODUCT DETAIL*/
+.product-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.product.detail.description{
+    margin-left:10px
+}
+
+.image {
+    position: relative;
+    width: 300px;
+}
+
+.memory {
+    display: inline-flex;
+    width: 36px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    position: absolute;
+    border-radius: 5px;
+    top: 10px;
+    left: 20px;
+    padding: 0px;
+    color: white;
+}
+
+.product-detail-offer {
+    font-size: 0.6rem;
+    color: red;
+    font-weight: bold;
+}
+
+/*PRICE*/
+.price {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem
+}
+
+.price-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.button-style {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #1c9feb;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*CONDITIONS*/
+.conditions {
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+}
+
+.conditions-detail {
+    display: flex;
+    gap: 8px;
+}
+
+.conditions-detail-image {
+    height: 30px;
+}
+
+.conditions-detail-text {
+    font-size: 0.8rem;
+}
+
+
+/*RECOMENDATIONS*/
+.recommendations-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.recommendations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.recommendation-detail {
+    padding: 10px;
+    border: solid 1px #cccccc;
+    margin: 10px;
+    text-align: center
+}
+
+.recommendation-image {
+    height: 150px;
+    width: 260px;
+}
+
+.recommendation-title {
+    font-size: 0.9rem;
+}
+
+.recommendation-description {
+    text-align: start;
+}
+
+.new,
+.offer {
+    align-items: center;
+    padding: 0.25rem;
+    justify-content: center;
+    background-color: red;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+}
+
+.new {
+    background-color: #1c9feb;
+}
+
+/*LOTTERY*/
+.lottery {
+    display: flex;
+    flex-direction: column;
+    background-color: #9ebedb;
+    padding: 20px;
+    gap: 50px;
+    margin-bottom: 1rem;
+}
+
+.lottery-title {
+    font-size: 2rem;
+}
+
+.lottery-detail {
+    flex-grow: 1;
+}
+
+.lottery-form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.lottery-input {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 0.25rem
+}
+
+/*FOOTER*/
+.footer {
+    text-align: center;
+    border: solid 1px #cccccc;
+}
+
+
+@media screen and (min-width: 768px) {
+    /*HEADER*/
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-list-item-link {
+        text-decoration: none;
+        color: #000
+    }
+
+    .navBar_style {
+        display: flex;
+        gap: 20px;
+        margin: 10px;
+        visibility: visible
+    }
+
+    .header-logo {
+        flex-shrink: 1;
+    }
+
+    .contact_button {
+        border-radius: 6px;
+        border: 1px solid #cccccc;
+        text-align: center;
+        padding: 0.5rem
+    }
+
+    .contact-button-text {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    /*PRODUCT DETAIL*/
+    .product-detail {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /*CONDITIONS*/
+    .conditions {
+        justify-content: space-between;
+        display: flex;
+        gap: 10px;
+    }
+
+    .conditions-detail {
+        display: flex;
+        gap: 8px;
+    }
+
+    .conditions-detail-image {
+        height: 30px;
+    }
+
+    .conditions-detail-text {
+        font-size: 0.8rem;
+    }
+
+    /*RECOMENDATIONS*/
+    .recommendations {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 25px;
+    }
+
+    .recommendation-image {
+        height: 150px;
+        width: 200px;
+    }
+
+    .recommendation-detail {
+        margin: 0px
+    }
+
+    /*LOTTERY*/
+    .lottery {
+        flex-direction: row
+    }
 }
