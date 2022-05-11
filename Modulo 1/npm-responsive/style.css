@@ -1,0 +1,86 @@
+.header-nav-list{
+    list-style: none;
+    display:flex;
+}
+
+.header-nav-item{   
+    padding: 12px;
+}
+
+.header-superior{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
+    border-top: 10px solid
+}
+
+.top-header-message{
+    padding:12px
+}
+
+.nav-link{
+    color: #000;
+    text-decoration: none;
+}
+
+.header-mid{
+    display:flex;
+    border-top:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    gap:12px
+}
+
+.logo{
+    height: 25px;
+    width: 25px;
+    padding:10px;
+}
+
+.search-form{
+    flex-grow: 1;
+    display:flex
+}
+
+.search-input{
+    padding: 6px;
+    font-family: monospace;
+    border: none;
+    background-color: #ccc;
+    flex-grow: 1;
+}
+
+.search-input:focus{
+    border: 1px solid #000000
+}
+
+.search-button{
+    background-color: #000;
+    color: white;
+    padding:10px;
+    border:none
+}
+
+
+.login{
+    padding: 12px
+}
+
+.signup-button,
+.signin-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    padding:10px
+}
+
+.signup-button:hover,
+.signin-button:hover{
+    color:#e0e0e0
+}
+
+.signup-button{
+    border:1px solid #e0e0e0
+}
+
