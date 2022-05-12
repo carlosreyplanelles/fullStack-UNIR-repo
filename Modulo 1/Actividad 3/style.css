@@ -4,6 +4,8 @@ body {
 }
 .main-container{
     margin:0px 10px;
+    display:flex;
+    flex-direction:column;
 }
 /*HEADER*/
 .logo {
@@ -118,7 +120,8 @@ body {
     padding: 10px;
     border: solid 1px #cccccc;
     margin: 10px;
-    text-align: center
+    text-align: center;
+    flex-basis:300px
 }
 
 .recommendation-image {
@@ -260,7 +263,7 @@ body {
 
     .recommendation-image {
         height: 150px;
-        width: 200px;
+        width: 250px;
     }
 
     .recommendation-detail {
@@ -270,5 +273,13 @@ body {
     /*LOTTERY*/
     .lottery {
         flex-direction: row
+    }
+}
+@media screen and (min-width: 1200px) {
+    .main-container{
+        align-items: center
+    }
+    .main-article{
+        width:1200px;
     }
 }
