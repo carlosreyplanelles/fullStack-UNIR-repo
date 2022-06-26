@@ -1,19 +1,35 @@
 class Carrito {
-  constructor(productos=[], total = 0, currency = "€") {
-    const productos = productos;
-    this.total = total;
-    this.currency = currency;
+
+  #catalogo
+  #total
+  #currency
+  constructor(urlCatalogo, total = 0, currency = "€") {
+    this.#catalogo = new Catalogo(urlCatalogo);
+    this.#total = total;
+    this.#currency = currency;
     this.prodUnidades = [];
   }
 
-  actualizarUnidades(sku, unidades) {
-    const prod = this.obtenerInformacionProducto(sku);
-    prodUnidades[sku] = unidades;
-    this.actualizarPrecio();
+
+  /*GETTERS AND SETTERS*/
+  get catalogo(){
+    return this.#catalogo
   }
 
-  existeProducto(prod) {
-    return !typeof prod === "undefined";
+  get total(){
+    return this.#total
+  }
+
+  set total(updatedTotal){
+    this.#total = updatedTotal
+  }
+
+  get currency(){
+    return this.#currency
+  }
+  
+  actualizarProductoCarrito(sku, unidades) {
+    this.prodUnidades[sku] = unidades;
   }
 
   obtenerInformacionProducto(sku) {
@@ -21,22 +37,26 @@ class Carrito {
     return res;
   }
 
-  obtenerCarrito() {
-    const carrito = {};
-    carrito["total"] = this.total;
-    carrito["currency"] = this.currency;
-    carrito["productos"] = this.productos;
-
-    return carrito;
+  calcularSubtotal(sku){
+    const prod = this.catalogo.getProducto(sku);
+    const prodCant = this.prodUnidades[sku]
+    let res = 0
+    if(typeof prodCant !=='undefined'){
+      res = prodCant * prod.price
+    }
+    return Math.round(res * 100) / 100;
   }
 
   calcularTotal() {
-    return this.productos.reduce((acc, p) => {
-      return (acc += p.price * p.quantity);
-    });
+    let total = 0
+    Object.keys(this.prodUnidades).forEach((key)=>{
+      const prod = this.catalogo.getProducto(key);
+      total += this.prodUnidades[key] * prod.price;
+      })
+      return Math.round(total * 100) / 100
   }
 
-  actualizarCarrito(prod) {
-    this.total = this.calcularTotal();
+  actualizarCarrito() {
+    this.total = Math.round(this.calcularTotal() * 100) / 100;
   }
 }

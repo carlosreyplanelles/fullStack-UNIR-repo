@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
+    <div class="mainContainer">
+        <div id="products" class="products-alignment">
+            <div class="headers">
+                <div><span class="header-font">Producto</span></div>
+                <div><span class="header-font">Cantidad</span></div>
+                <div><span class="header-font">Unidad</span></div>
+                <div><span class="header-font">SubTotal</span></div>
+            </div>
+
+        </div>
+        <div id="summary" class="summary_container--background textAlignment--center">
+            <div class="totalTitle-border">
+                <h1>Total</h1>
+            </div>
+            
+            <div id="summaryWrapper"></div>
+        </div>
+    </div>
+
 
     
-    <script src="Scripts/Producto.js"></script>
-    <script src="Scripts/Carrito.js"></script>
+    <script src="Scripts/catalogo.js"></script>
+    <script src="Scripts/carrito.js"></script>
     <script src="Scripts/scripts.js"></script>
-
 </body>
 </html>
