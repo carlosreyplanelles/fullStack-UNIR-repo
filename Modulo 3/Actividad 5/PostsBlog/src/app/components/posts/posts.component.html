@@ -1,10 +1,39 @@
-<div id="posts" [innerHtml] = "htmlResult">
+<div class="postForm"id="form">
+  <div class="postForm_field_container">
+      <label class="postForm_label" for="title">Title</label>
+<input class="postForm_input "type="text" id="title" [(ngModel)]="newPostTitle"/>
+  </div>
+<div class="postForm_field_container">
+  <label class="postForm_label" for="image URL">Image URL</label>
+  <input class="postForm_input" type="text" id="imageURL" [(ngModel)]="newPostImageURL"/>
 </div>
-<div id="form">
-    <label for="title">Title</label>
-    <input type="text" id="title">
-    <label for="image URL">Image URL</label>
-    <input type="text" id="imageURL">
-    <label for="description">Description</label>
-    <input type="text" id="description">
+<div class="postForm_field_container">
+  <label class="postForm_label" for="description">Description</label>
+<textarea class="postForm_input" id="description" [(ngModel)]="newPostDescription"></textarea> 
 </div>
+<div>
+  <button class="buttonStyle" (click)="publishPost()">Publish Quote</button>
+</div>
+</div>
+<div>
+  <h1 class="mainTitle">QUOTES</h1>
+</div>
+<div class="post_list_container">
+  <article class="post_container" *ngFor="let post of postsList">
+    <div class="image_container">
+      <figure>
+        <img class="image" src="{{ post.imageURL }}" alt="" />
+      </figure>
+    </div>
+    <div class="title_container">
+        <h1>{{post.title}}</h1>
+    </div>
+    <div class="description_container">
+        <span>{{post.description}}</span>
+    </div>
+    <div class="publishDate_container">
+        <span>{{post.publishDate}}</span>
+    </div>
+  </article>
+</div>
+
