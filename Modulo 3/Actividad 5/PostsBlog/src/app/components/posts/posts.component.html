@@ -18,22 +18,24 @@
 <div>
   <h1 class="mainTitle">QUOTES</h1>
 </div>
-<div class="post_list_container">
-  <article class="post_container" *ngFor="let post of postsList">
-    <div class="image_container">
-      <figure>
-        <img class="image" src="{{ post.imageURL }}" alt="" />
-      </figure>
-    </div>
-    <div class="title_container">
-        <h1>{{post.title}}</h1>
-    </div>
-    <div class="description_container">
-        <span>{{post.description}}</span>
-    </div>
-    <div class="publishDate_container">
-        <span>{{post.publishDate}}</span>
-    </div>
-  </article>
+<div>
+  <div class="post_list_container">
+    <article class="post_container" *ngFor="let post of postsList">
+      <div class="image_container">
+        <figure>
+          <img class="image" src="{{ post.imageURL }}" alt="" />
+        </figure>
+      </div>
+      <div class="title_container">
+          <h1>{{post.title}}</h1>
+      </div>
+      <div class="description_container">
+          <span>{{post.description}}</span>
+      </div>
+      <div class="publishDate_container">
+          <span>{{post.publishDate}}</span>
+      </div>
+    </article>
+  </div>
 </div>
 
