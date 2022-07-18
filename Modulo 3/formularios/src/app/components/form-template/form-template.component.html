@@ -1,0 +1,20 @@
+<div class="container">
+    <form #formTemplate="ngForm" (ngSubmit)="getDataForm(formTemplate)">
+        <div class="my-2">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" ngModel>
+        </div>
+
+        <div class="my-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" ngModel>
+        </div>
+
+        <div >
+            <input type="checkbox" name="rgpd" ngModel>He leido y acepto la politica de protección de datos.
+        </div>
+
+        <input type="submit" value="enviar" name>
+    </form>
+</div>
+

@@ -1,0 +1,7 @@
+.header{
+    display: flex;
+    background-color: lightgray;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid gray;
+}

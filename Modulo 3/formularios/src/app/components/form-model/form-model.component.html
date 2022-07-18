@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="formModel" (ngSubmit)="getDataForm()">
+        <div class="my-2">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre" id="nombre">
+        </div>
+
+        <div class="my-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" formControlName="email" id="email">
+        </div>
+        <div class="my-2">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control" formControlName="edad" id="edad">
+        </div>
+
+        <div class="my-2">
+            <label for="dni" class="form-label">DNI</label>
+            <input type="text" class="form-control" formControlName="dni" id="dni">
+        </div>
+
+        <div class="my-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="password">
+        </div>
+
+        <div class="my-2">
+            <label for="password2" class="form-label">Repite password</label>
+            <input type="password" class="form-control" formControlName="password2" id="password2">
+        </div>
+
+        <input type="submit" value="enviar" name [disabled]="formModel.valid">
+        {{formModel.valid}}
+    </form>
+</div>
