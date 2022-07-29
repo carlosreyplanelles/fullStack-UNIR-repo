@@ -1,0 +1,13 @@
+<section class="container mt-3">
+    <div class="row">
+        <figure class="col-12 col-md-3">
+            <img [src]="myUser?.avatar" [alt]="myUser.first_name">
+        </figure>
+        <div class="col-12 col-md-9">
+            <h2>{{myUser?.first_name}} {{myUser?.last_name}}</h2>
+            <p>Email: <a [href]="'mailto:'+myUser?.email"></a>
+
+            </p>
+        </div>
+    </div>
+</section>

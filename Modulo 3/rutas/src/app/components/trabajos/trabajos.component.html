@@ -1,0 +1,8 @@
+<h1>TRABAJOS</h1>
+<div>
+    <article *ngFor="let trabajo of trabajos">
+        <h1> {{trabajo.titulo}}</h1>
+        <button [routerLink]="['/trabajo', trabajo.url]">Detalles</button>
+        <hr>
+    </article>
+</div>

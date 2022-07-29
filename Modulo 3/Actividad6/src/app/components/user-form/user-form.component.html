@@ -1,0 +1,22 @@
+<section class="container mt-3">
+    <h1>{{ this.operation }} usuario</h1>
+    <form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+        <div class="row mb-3">
+            <label class="form-label" for="first_name">Nombre</label>
+            <input type="text" id="first-name" class="form-control" formControlName="first_name">
+        </div>
+        <div class="row mb-3">
+            <label class="form-label" for="last-name">Apellidos</label>
+            <input type="text" id="last-name" class="form-control" formControlName="last_name">
+        </div>
+        <div class="row mb-3">
+            <label class="form-label" for="username">Usuario</label>
+            <input type="text" id="username" class="form-control" formControlName="username">
+        </div>
+        <div class="row mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input type="text" id="email" class="form-control" formControlName="email">
+        </div>
+        <input type="submit" value= {{this.operation}} class="btn btn-success mt-3">
+    </form>
+</section>
